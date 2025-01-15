@@ -19,6 +19,11 @@ dependencyResolutionManagement {
     }
 }
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "nutrition"
 include(":app")
- 
+include(":feature:foodscan:foodscan-presentation")
+include(":feature:foodscan:foodscan-domain")
+include(":feature:streak:streak-presentation")
+include(":feature:streak:streak-domain")

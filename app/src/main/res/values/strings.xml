@@ -2,4 +2,6 @@
     <string name="app_name">nutrition</string>
     <string name="home_tab_label">Home</string>
     <string name="streak_tab_label">Streaks</string>
+    <string name="food_scan_banner_title">Scan Your Food</string>
+    <string name="food_scan_banner_description">Instantly analyze your meal’s nutrition by scanning it.</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.nhatbui.foodscan.presentation.ui
+package com.nhatbui.foodscan.presentation.ui.scanner
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

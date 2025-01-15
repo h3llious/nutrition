@@ -18,8 +18,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import com.nhatbui.nutrition.R
-import com.nhatbui.nutrition.ui.theme.NeutralHigh
-import com.nhatbui.nutrition.ui.theme.NeutralMedium
 
 @Composable
 fun BottomNavigationBar(

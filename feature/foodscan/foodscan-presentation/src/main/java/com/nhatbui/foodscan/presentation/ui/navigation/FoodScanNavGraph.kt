@@ -9,7 +9,11 @@ import com.nhatbui.foodscan.presentation.ui.scanner.FoodScanScreen
 fun NavGraphBuilder.foodScanGraph(navController: NavController) {
     navigation<FoodScanGraph>(startDestination = FoodScanRoute.Scanner) {
         composable<FoodScanRoute.Scanner> {
-            FoodScanScreen()
+            FoodScanScreen(
+                onNavigateBack = {
+                    navController.navigateUp()
+                }
+            )
         }
     }
 }

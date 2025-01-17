@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="food_scan_guide_title">Scan Your Food</string>
+    <string name="food_scan_guide_description">Ensure your food is well-lit and in focus for the most accurate scan.</string>
+</resources>

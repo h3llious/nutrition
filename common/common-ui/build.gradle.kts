@@ -2,13 +2,10 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
 }
 
 android {
-    namespace = "com.nhatbui.foodscan.presentation"
+    namespace = "com.nhatbui.common.ui"
     compileSdk = 35
 
     defaultConfig {
@@ -40,26 +37,11 @@ android {
 }
 
 dependencies {
-    implementation(projects.feature.foodscan.foodscanDomain)
-    implementation(projects.common.commonUi)
-
-    // DI
-    implementation(libs.hilt.navigation.compose)
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
-
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.kotlinx.serialization.json)
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.constraintlayout.compose)
-    implementation(libs.androidx.camera2)
-    implementation(libs.androidx.camera.view)
-    implementation(libs.androidx.camera.core)
-    implementation(libs.coil.compose)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

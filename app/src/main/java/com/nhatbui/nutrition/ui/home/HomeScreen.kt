@@ -53,7 +53,7 @@ private fun FoodScannerBanner(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .border(width = 1.dp, color = SecondaryS400)
+            .border(width = 1.dp, color = SecondaryS400, RoundedCornerShape(12.dp))
             .background(
                 brush = Brush.radialGradient(
                     colors = listOf(

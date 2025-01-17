@@ -7,8 +7,10 @@ object FoodScanGraph
 
 sealed class FoodScanRoute {
     @Serializable
-    data object Scanner: FoodScanRoute()
+    data object Scanner : FoodScanRoute()
 
     @Serializable
-    data object Result: FoodScanRoute()
+    data class Result(
+        val uri: String
+    ) : FoodScanRoute()
 }

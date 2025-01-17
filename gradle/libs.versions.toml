@@ -20,6 +20,7 @@ hilt-navigation-compose = "1.2.0"
 constraintlayout-compose = "1.1.0"
 camera2 = "1.4.1"
 coil = "3.0.2"
+kotlinx-coroutines-android = "1.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -49,6 +50,7 @@ androidx-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "c
 androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "camera2" }
 androidx-camera-core = { module = "androidx.camera:camera-core", version.ref = "camera2" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines-android" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

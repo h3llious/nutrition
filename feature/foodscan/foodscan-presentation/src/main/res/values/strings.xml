@@ -2,4 +2,6 @@
 <resources>
     <string name="food_scan_guide_title">Scan Your Food</string>
     <string name="food_scan_guide_description">Ensure your food is well-lit and in focus for the most accurate scan.</string>
+    <string name="food_scan_in_progress_label">Scanning in progress…</string>
+    <string name="food_scan_progress">%s%%</string>
 </resources>

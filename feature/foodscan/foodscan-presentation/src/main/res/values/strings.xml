@@ -4,4 +4,22 @@
     <string name="food_scan_guide_description">Ensure your food is well-lit and in focus for the most accurate scan.</string>
     <string name="food_scan_in_progress_label">Scanning in progress…</string>
     <string name="food_scan_progress">%s%%</string>
+    <string name="result_title">Nutrition Results</string>
+    <string name="overview_label">Nutritional Overview:</string>
+    <string name="macronutrients_label">Macronutrients</string>
+    <string name="macronutrients_subtitle">Total: %sg</string>
+    <string name="macronutrients_description">%sg</string>
+    <string name="micronutrients_label">Micronutrients</string>
+    <string name="micronutrients_subtitle">Total: %s%%</string>
+    <string name="micronutrients_description">%s%%</string>
+    <string name="calories_label">Calories</string>
+    <string name="calories_description">%s kcal</string>
+    <string name="nutrient_proteins">Proteins</string>
+    <string name="nutrient_carbs">Carbs</string>
+    <string name="nutrient_fats">Fats</string>
+    <string name="nutrient_vitamin_a">Vitamin A</string>
+    <string name="nutrient_calcium">Calcium</string>
+    <string name="scan_save_result_action">Save to Daily Log</string>
+    <string name="premium_prompt_description">Want more insights?</string>
+    <string name="premium_prompt_action">Upgrade to Premium</string>
 </resources>

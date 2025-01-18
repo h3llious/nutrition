@@ -141,7 +141,7 @@ fun FoodScanScreen(
             modifier = Modifier.fillMaxSize()
         ) {
             HeaderBar(onNavigateBack = onNavigateBack)
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
             FoodScanGuide(
                 modifier = Modifier
                     .fillMaxWidth()

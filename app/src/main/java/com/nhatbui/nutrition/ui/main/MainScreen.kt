@@ -1,7 +1,11 @@
 package com.nhatbui.nutrition.ui.main
 
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.exclude
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -12,6 +16,7 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.nhatbui.foodscan.presentation.ui.navigation.FoodScanRoute
 import com.nhatbui.nutrition.ui.navigation.BottomNavigationBar
 import com.nhatbui.nutrition.ui.navigation.Route
 import kotlinx.collections.immutable.persistentListOf
@@ -23,7 +28,8 @@ fun MainScreen() {
 
     val bottomBarOwners = persistentListOf(
         Route.Home,
-        Route.Streak
+        Route.Streak,
+        FoodScanRoute.Result("")
     )
     val currentBottomNavRoute = remember(currentNavBackStackEntry) {
         bottomBarOwners.firstOrNull { owner ->
@@ -46,7 +52,8 @@ fun MainScreen() {
                     currentRoute = currentBottomNavRoute
                 )
             }
-        }
+        },
+        contentWindowInsets = WindowInsets.systemBars.exclude(WindowInsets.statusBars)
     ) { innerPadding ->
         Surface(
             modifier = Modifier.padding(innerPadding)

@@ -26,7 +26,12 @@ fun NavGraphBuilder.foodScanGraph(navController: NavController) {
         }
         composable<FoodScanRoute.Result> { entry ->
             val route = entry.toRoute<FoodScanRoute.Result>()
-            ScanResultScreen(route.uri)
+            ScanResultScreen(
+                scanTargetUri = route.uri,
+                onNavigateBack = {
+                    navController.navigateUp()
+                }
+            )
         }
     }
 }

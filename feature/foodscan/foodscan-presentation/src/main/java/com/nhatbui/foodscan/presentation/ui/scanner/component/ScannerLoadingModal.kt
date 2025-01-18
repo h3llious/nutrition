@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ProgressIndicatorDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,9 +30,11 @@ import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.nhatbui.foodscan.presentation.R
 
 private const val ANIMATE_DURATION = 5000
@@ -55,6 +58,7 @@ fun ScannerLoadingModal(
             CircularLoadingSpinner(angle)
             Spacer(modifier = Modifier.height(48.dp))
             Text(
+                style = MaterialTheme.typography.labelMedium,
                 textAlign = TextAlign.Center,
                 text = stringResource(R.string.food_scan_in_progress_label)
             )
@@ -102,6 +106,9 @@ private fun ScanningProgressIndicator(progressPercentage: Int) {
     )
     Spacer(modifier = Modifier.height(14.dp))
     Text(
+        fontWeight = FontWeight.W600,
+        fontSize = 20.sp,
+        lineHeight = 24.sp,
         textAlign = TextAlign.Center,
         text = stringResource(R.string.food_scan_progress, progressPercentage)
     )

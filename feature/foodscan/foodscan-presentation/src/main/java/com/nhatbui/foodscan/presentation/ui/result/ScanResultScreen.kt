@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -45,7 +46,10 @@ import com.nhatbui.foodscan.presentation.presentation.ScanResultViewModel
 import com.nhatbui.foodscan.presentation.ui.result.component.MacronutrientSection
 import com.nhatbui.foodscan.presentation.ui.result.component.MicronutrientSection
 import com.nhatbui.foodscan.presentation.ui.result.component.OverviewSection
+import com.nhatbui.foodscan.presentation.ui.result.component.SegmentedCircularChart
+import com.nhatbui.foodscan.presentation.ui.result.mapper.NutrientDetailsToCircularSegmentMapper
 import com.nhatbui.foodscan.presentation.ui.result.mapper.NutrientUiMapper
+import com.nhatbui.foodscan.presentation.ui.result.model.NutrientsUiModel
 import com.nhatbui.foodscan.presentation.ui.result.model.ResultInfoTitleUiModel
 
 @Composable
@@ -78,8 +82,38 @@ fun ScanResultScreen(
         OverviewSection(calories = viewState.nutritionInCalories)
         MacronutrientSection(macronutrients.total, macronutrients.details)
         MicronutrientSection(micronutrients.total, micronutrients.details)
+        NutrientSummaryChart(
+            macronutrients = macronutrients,
+            micronutrients = micronutrients
+        )
         SaveDailyLogButton()
         PremiumPrompt()
+    }
+}
+
+@Composable
+fun NutrientSummaryChart(
+    macronutrients: NutrientsUiModel,
+    micronutrients: NutrientsUiModel,
+    modifier: Modifier = Modifier
+) {
+    val circularSegmentUiMapper = remember { NutrientDetailsToCircularSegmentMapper() }
+    Box(
+        modifier = modifier.fillMaxWidth().padding(bottom = 20.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        SegmentedCircularChart(
+            modifier = Modifier.size(144.dp),
+            totalWeight = macronutrients.total,
+            segmentData = circularSegmentUiMapper.map(macronutrients),
+            strokeWidth = 12.dp
+        )
+        SegmentedCircularChart(
+            modifier = Modifier.size(110.dp),
+            totalWeight = 100,
+            segmentData = circularSegmentUiMapper.map(micronutrients),
+            strokeWidth = 12.dp
+        )
     }
 }
 

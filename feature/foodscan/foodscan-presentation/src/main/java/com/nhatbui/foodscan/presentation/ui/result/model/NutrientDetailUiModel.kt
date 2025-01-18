@@ -43,7 +43,7 @@ sealed class NutrientDetailUiModel(
         override val value: Int,
     ) : NutrientDetailUiModel(
         iconRes = R.drawable.ic_vitamin_a,
-        tintColor = Color(0xFFBD7E21),
+        tintColor = Color(0xFFFFA726),
         name = { stringResource(R.string.nutrient_vitamin_a) },
         value = value
     )
@@ -52,7 +52,7 @@ sealed class NutrientDetailUiModel(
         override val value: Int,
     ) : NutrientDetailUiModel(
         iconRes = R.drawable.ic_calcium,
-        tintColor = Color(0xFF4F8D52),
+        tintColor = Color(0xFF66BB6A),
         name = { stringResource(R.string.nutrient_calcium) },
         value = value
     )

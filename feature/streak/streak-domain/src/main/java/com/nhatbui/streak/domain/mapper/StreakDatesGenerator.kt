@@ -32,9 +32,10 @@ class StreakDatesGenerator(
 
         for (dateIndex in 1..TWO_WEEK_DATE_COUNT) {
             val dateDifference = ChronoUnit.DAYS.between(processingDate, now)
-            val isLoggedDate = dateDifference in 1..<pastStreakCount
+            val isLoggedDate = dateDifference in 1..pastStreakCount
             val isCurrentDate = dateDifference == 0L
-            val isUpcomingTarget = upcomingTargetDateCount >= -dateDifference
+//            val isUpcomingTarget = upcomingTargetDateCount >= -dateDifference
+            val isUpcomingTarget =  (-dateDifference) in 0..upcomingTargetDateCount
 
             generatedDates.add(
                 when {

@@ -27,17 +27,17 @@ class StreakDatesGeneratorTest(
                 false,
                 MilestoneDomainModel.TenDayMilestone(false),
                 listOf(
-                    StreakDateDomainModel.LoggedStreak(6), // Monday Jan 6
+                    StreakDateDomainModel.NoStreakDate(6), // Monday Jan 6
                     StreakDateDomainModel.LoggedStreak(7),
                     StreakDateDomainModel.LoggedStreak(8),
                     StreakDateDomainModel.LoggedStreak(9),
-                    StreakDateDomainModel.CurrentDate(10), // Current Friday Jan 10
-                    StreakDateDomainModel.DateInTargetStreak(11),
-                    StreakDateDomainModel.DateInTargetStreak(12),
+                    StreakDateDomainModel.LoggedStreak(10),
+                    StreakDateDomainModel.LoggedStreak(11),
+                    StreakDateDomainModel.CurrentDate(12), // Current Sunday Jan 12
                     StreakDateDomainModel.DateInTargetStreak(13),
                     StreakDateDomainModel.DateInTargetStreak(14),
-                    StreakDateDomainModel.NoStreakDate(15),
-                    StreakDateDomainModel.NoStreakDate(16),
+                    StreakDateDomainModel.DateInTargetStreak(15),
+                    StreakDateDomainModel.DateInTargetStreak(16),
                     StreakDateDomainModel.NoStreakDate(17),
                     StreakDateDomainModel.NoStreakDate(18),
                     StreakDateDomainModel.NoStreakDate(19)
@@ -51,7 +51,7 @@ class StreakDatesGeneratorTest(
     @Before
     fun setup() {
         classUnderTest = StreakDatesGenerator(
-            now = LocalDate.of(2025, 1, 10)
+            now = LocalDate.of(2025, 1, 12)
         )
     }
 

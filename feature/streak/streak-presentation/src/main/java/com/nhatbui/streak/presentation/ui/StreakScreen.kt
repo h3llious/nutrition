@@ -76,7 +76,7 @@ fun StreakScreen(
             targetMilestone = targetMilestone
         )
 
-        Spacer(Modifier.height(36.dp))
+        Spacer(Modifier.height(22.dp))
         MilestoneSection(milestones)
     }
 }

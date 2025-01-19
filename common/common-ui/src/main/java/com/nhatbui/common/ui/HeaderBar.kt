@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -36,8 +37,7 @@ fun HeaderBar(
         modifier = modifier
             .fillMaxWidth()
             .padding(top = statusBarTopPadding)
-            .padding(16.dp)
-        ,
+            .padding(16.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -54,14 +54,18 @@ fun HeaderBar(
 }
 
 @Composable
-private fun DefaultBackButton(
-    onNavigateBack: () -> Unit
+fun DefaultBackButton(
+    onNavigateBack: () -> Unit,
+    tintColor: Color = Color.White
 ) {
-    IconButton(onClick = onNavigateBack) {
+    IconButton(
+        modifier = Modifier.size(24.dp),
+        onClick = onNavigateBack
+    ) {
         Icon(
-            modifier = Modifier.size(24.dp),
+            modifier = Modifier.fillMaxSize(),
             painter = painterResource(R.drawable.ic_arrow_left),
-            tint = Color.Unspecified,
+            tint = tintColor,
             contentDescription = stringResource(R.string.back_label)
         )
     }

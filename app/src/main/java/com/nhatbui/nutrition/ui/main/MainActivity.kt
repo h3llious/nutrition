@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.nhatbui.nutrition.ui.theme.NutritionTheme
+import com.nhatbui.common.ui.theme.NutritionTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

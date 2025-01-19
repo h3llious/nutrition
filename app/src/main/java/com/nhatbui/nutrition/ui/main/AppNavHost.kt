@@ -27,7 +27,11 @@ fun AppNavHost(
         }
         foodScanGraph(navHostController)
         composable<Route.Streak> {
-            StreakScreen()
+            StreakScreen(
+                onNavigateBack = {
+                    navHostController.navigateUp()
+                }
+            )
         }
     }
 }

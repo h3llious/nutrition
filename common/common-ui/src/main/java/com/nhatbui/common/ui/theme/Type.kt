@@ -1,4 +1,4 @@
-package com.nhatbui.nutrition.ui.theme
+package com.nhatbui.common.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -20,6 +20,12 @@ val Typography = Typography(
         fontWeight = FontWeight.W400,
         fontSize = 12.sp,
         lineHeight = 16.sp
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.W400,
+        fontSize = 14.sp,
+        lineHeight = 20.sp
     ),
     labelSmall = TextStyle(
         fontFamily = FontFamily.Default,

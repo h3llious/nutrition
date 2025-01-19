@@ -41,6 +41,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.nhatbui.common.ui.HeaderBar
+import com.nhatbui.common.ui.theme.NeutralHigh
 import com.nhatbui.foodscan.presentation.R
 import com.nhatbui.foodscan.presentation.presentation.ScanResultViewModel
 import com.nhatbui.foodscan.presentation.ui.result.component.MacronutrientSection
@@ -137,7 +138,7 @@ fun PremiumPrompt() {
             fontWeight = FontWeight.W500,
             fontSize = 14.sp,
             lineHeight = 20.sp,
-            color = Color(0xFF141414),
+            color = NeutralHigh,
             textDecoration = TextDecoration.Underline
         )
     }

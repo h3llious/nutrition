@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="streaks_title">Streaks</string>
+    <string name="streaks_share">Share</string>
+    <string name="streaks_motivate_text_1">You\'re on a</string>
+    <string name="streaks_motivate_text_2">%s days Streak!</string>
+    <string name="streaks_motivate_text_3">Keep it up!</string>
+    <string name="streaks_milestone_label">%s-day streak achiever</string>
+    <string name="streaks_milestone_section_title">Milestones</string>
+</resources>

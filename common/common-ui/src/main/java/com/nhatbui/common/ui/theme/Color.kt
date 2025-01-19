@@ -1,4 +1,4 @@
-package com.nhatbui.nutrition.ui.theme
+package com.nhatbui.common.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

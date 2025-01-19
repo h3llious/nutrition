@@ -28,9 +28,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.nhatbui.nutrition.R
-import com.nhatbui.nutrition.ui.theme.NeutralHigh
-import com.nhatbui.nutrition.ui.theme.NeutralMedium
-import com.nhatbui.nutrition.ui.theme.SecondaryS400
+import com.nhatbui.common.ui.theme.NeutralHigh
+import com.nhatbui.common.ui.theme.NeutralMedium
+import com.nhatbui.common.ui.theme.SecondaryS400
 
 @Composable
 fun HomeScreen(

@@ -11,7 +11,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 26
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -40,6 +40,7 @@ android {
 
 dependencies {
     implementation(projects.feature.streak.streakDomain)
+    implementation(projects.common.commonUi)
 
     // DI
     implementation(libs.hilt.navigation.compose)
